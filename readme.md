@@ -12,3 +12,20 @@ This workshop documentation assumes you are using the [p5 web editor](https://ed
 <script src="p5.speech.js"></script>
 
 ```
+
+4. Go to the sketch.js file (this will be where we will be doing the remainder of the work). Add the following lines of code to the setup function
+
+```javascript
+function setup(){
+    let speechRec = new p5.SpeechRec('en-US',gotSpeech);
+    let continuous = true;
+    speechRec.start(continuous);
+
+    function gotSpeech(){
+        if(speechRec.resultValue){
+            console.log(speechRec.resultString);
+        }
+    }
+}
+
+```
