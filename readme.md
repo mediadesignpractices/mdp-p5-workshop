@@ -13,13 +13,33 @@ This workshop documentation assumes you are using the [p5 web editor](https://ed
 
 ```
 
-4. Go to the sketch.js file (this will be where we will be doing the remainder of the work). Add the following lines of code to the setup function
+4. Go to the **sketch.js** file (this will be where we will be doing the remainder of the work). The setup function should look like this:
 
 ```javascript
 function setup(){
     let speechRec = new p5.SpeechRec('en-US',gotSpeech);
     let continuous = true;
     speechRec.start(continuous);
+
+    function gotSpeech(){
+        if(speechRec.resultValue){
+            console.log(speechRec.resultString);
+        }
+    }
+}
+
+```
+
+5. Click on the Run button at the top of p5 web editor. Your browser will ask you for permission to access the microphone. Click Yes. As you speak, the text should be printed in the console window.
+
+6. If you would like to get some unfinalized results, change the setup function to look like the following:
+
+```javascript
+function setup(){
+    let speechRec = new p5.SpeechRec('en-US',gotSpeech);
+    let continuous = true;
+    let interim = true;
+    speechRec.start(continuous,interim);
 
     function gotSpeech(){
         if(speechRec.resultValue){
