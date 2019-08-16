@@ -9,6 +9,6 @@ This workshop documentation assumes you are using the [p5 web editor](https://ed
 3. Open the **index.html** file and add the p5.speech.js file by adding the following line of code underneath line 6 :
 
 ```html
-6 <script src="p5.speech.js"></script>
+<script src="p5.speech.js"></script>
 
 ```
