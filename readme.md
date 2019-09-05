@@ -2,6 +2,16 @@
 
 This workshop documentation assumes you are using the [p5 web editor](https://editor.p5js.org/). It is a beginning friendly (hopefully) set of instructions on progressively getting speech-to-text and word-to-vec working in p5.
 
+## Making Strategies
+There are many approaches towards making. The engineering mindset towards making can usually be generalized to "think **and then** make". You start by planning everything you are going to make and then you execute on that plan. Of couse things don't go to plan, and you adapt, but generally you have a vision of what the outcome will be. After reaching that outcome, you might iterate, coming up with a new plan, and repeating the process.
+
+In this program, the strategy towards making can be defined as "thinking **while** making". This most identifiable difference in this strategy is that you actually don't necessarily have an outcome in mind. You start making things, and the process of making helps you think through the other aspects of what you are making. The final output from this process might not actually be a thing you made, it could just be the ideas you formed while making something.
+
+## Making Approaches
+Always build progressively. Even if you have a big project with multiple moving parts, start by building just one component at a time, and progressively add the other parts in. This will help debug things when things inevitably don't work.
+
+A lot of my work when I'm making things aren't about creating some "new technology", but are about reconfiguring and mashing-up existing components. So for this workshop, we'll be taking speech-to-text as input in p5 and then doing some simple machine learning using word2vec with ml5. And we'll be building this progressively, adding complexity slowly to make sure everything is working.
+
 ## Getting Speech-to-Text Working
 
 1. Download [p5.speech Library](http://ability.nyu.edu/p5.js-speech/)
@@ -88,3 +98,6 @@ wordVectors.add(["cat","dog"],printResult);
 //Subtract two words
 wordVectors.subtract(["cat","dog"],printResult);
 ```
+
+## What Next?
+Once you have these components working, you can do a lot more creative exploration without much effort. Simply changing your the word2vec function you are using can give you unexpected results that might give you some insight into how this technology works.
